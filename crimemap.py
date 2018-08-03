@@ -45,7 +45,7 @@ def submitcrime():
     longitude = float(request.form.get("longitude"))
     description = request.form.get("description")
     DB.add_crime(category, date, latitude, longitude, description)
- return home()
+    return home()
 
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
